@@ -16,8 +16,8 @@ See [your demo video title here] (https://link_to_your_video)
 
 ## Acknowledgments
 
-I would like to acknowledge the following source codes: 
-http://developer.android.com/training/wearables/ui/2d-picker.html
-http://jasonmcreynolds.com/?p=388
+I would like to acknowledge the following source codes:                       
+http://developer.android.com/training/wearables/ui/2d-picker.html                          
+http://jasonmcreynolds.com/?p=388                
 and also the Catnip source code.
 
