@@ -13,7 +13,13 @@ See [your demo video title here] (https://link_to_your_video)
 
 ## Screenshots
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
+<img src="screenshots/PhoneMainView.png" height="400" alt="Screenshot"/>
+This is the main view of the app on the phone.            
+
+<img src="screenshots/CongView.png" height="400" alt="Screenshot"/>
+This is the Congressional View that you get after entering the ZipCode or location.             
+
+<img src="screenshots/JohnPhone.png" height="400" alt="Screenshot"/><img src="screenshots/BillPhone.png" height="400" alt="Screenshot"/>
 
 ## Acknowledgments
 
