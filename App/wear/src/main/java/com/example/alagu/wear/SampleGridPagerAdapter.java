@@ -62,7 +62,7 @@ public class SampleGridPagerAdapter extends FragmentGridPagerAdapter {
                     new Page(R.string.name3, R.string.party3, 0),
             },
             {
-                    new Page(R.string.title20122, R.string.stat2, 0)
+                    new Page(R.string.title2012, R.string.stat, 0)
             }
     };
     private final Page[][] PAGES2 = {

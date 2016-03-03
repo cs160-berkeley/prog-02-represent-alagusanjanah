@@ -22,9 +22,9 @@
     <string name="party11">Democrat</string>
     <string name="party22">Republican</string>
     <string name="party33">Republican</string>
-    <string name="title2012">2012 Presidential Vote</string>
+    <string name="title2012">2012 Vote</string>
     <string name="stat">State: Ohio\nCounty: Harris\nObama:35%\nRomney:64%</string>
-    <string name="title20122">2012 Presidential Vote</string>
-    <string name="stat2">State: Ohio\nCounty: Harris\nObama:35%\nRomney:64%</string>
+    <string name="title20122">2012 Vote</string>
+    <string name="stat2">State: Oregon\nCounty: Marina\nObama:57%\nRomney:42%</string>
 
 </resources>
