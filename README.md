@@ -9,7 +9,7 @@ Alagu Sanjana Haribhaskaran (alagusanjana@berkeley.edu)
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See PROG2B CS160 Assignment (https://youtu.be/nHbyH2YSQCg)
 
 ## Screenshots
 This is the main view of the app on the phone.                       
