@@ -20,9 +20,14 @@ This is the main view of the app on the phone.
 This is the Congressional View that you get after entering the ZipCode or location.             
 
 <img src="screenshots/JohnPhone.png" height="400" alt="Screenshot"/><img src="screenshots/BillPhone.png" height="400" alt="Screenshot"/>                                                
-These are the Detail Views of the candidates that you get by clicking on them.                                     
-<img src="screenshots/JohnWhiteWatch.png" height="400" alt="Screenshot"/><img src="screenshots/BillWestWatch.png" height="400" alt="Screenshot"/>                                 
-The information about the candidates can simulatneously be found on the watch. You can swipe through to see all the candidates.
+These are the Detail Views of the candidates that you get by clicking on them.                               
+
+<img src="screenshots/JohnWhitewatch.png" height="400" alt="Screenshot"/><img src="screenshots/BillWestWatch.png" height="400" alt="Screenshot"/>                                 
+The information about the candidates can simulatneously be found on the watch. You can swipe through to see all the candidates. You can click on the candidate on the watch to get the detail view on the phone.                                          
+
+<img src="screenshots/2012presidential vote.png" height="400" alt="Screenshot"/>                                             
+You can scroll up to get the 2012 Presidential Vote statistics.                                        
+
 
 ## Acknowledgments
 
