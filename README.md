@@ -14,19 +14,28 @@ See [your demo video title here] (https://link_to_your_video)
 ## Screenshots
 
 <img src="screenshots/PhoneMainView.png" height="400" alt="Screenshot"/>                                              
-This is the main view of the app on the phone.            
+This is the main view of the app on the phone.                                                     
+
 
 <img src="screenshots/CongView.png" height="400" alt="Screenshot"/>                                       
-This is the Congressional View that you get after entering the ZipCode or location.             
+This is the Congressional View that you get after entering the ZipCode or location.                                                     
+
 
 <img src="screenshots/JohnPhone.png" height="400" alt="Screenshot"/><img src="screenshots/BillPhone.png" height="400" alt="Screenshot"/>                                                
-These are the Detail Views of the candidates that you get by clicking on them.                               
+These are the Detail Views of the candidates that you get by clicking on them.                          
+
 
 <img src="screenshots/JohnWhitewatch.png" height="400" alt="Screenshot"/><img src="screenshots/BillWestWatch.png" height="400" alt="Screenshot"/>                                 
-The information about the candidates can simulatneously be found on the watch. You can swipe through to see all the candidates. You can click on the candidate on the watch to get the detail view on the phone.                                          
+The information about the candidates can simulatneously be found on the watch. You can swipe through to see all the candidates. You can click on the candidate on the watch to get the detail view on the phone.                                                       
 
-<img src="screenshots/2012presidential vote.png" height="400" alt="Screenshot"/>                                             
+
+<img src="screenshots/2012presidential.vote.png" height="400" alt="Screenshot"/>                                             
 You can scroll up to get the 2012 Presidential Vote statistics.                                        
+
+When you shake the watch, it picks a random location and gives you candidte information on the watch and phone.                
+<img src="screenshots/JessicaParkWatch.png" height="400" alt="Screenshot"/>
+<img src="screenshots/RyanJackwatch.vote.png" height="400" alt="Screenshot"/>
+<img src="screenshots/Phoneshake.png" height="400" alt="Screenshot"/>
 
 
 ## Acknowledgments
