@@ -1,0 +1,110 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        tools:context=".MainActivity"
+        android:background="#f17979">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="REPRESENT!"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textV"
+            android:textColor="#090909" />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView"
+            android:layout_below="@+id/textV"
+            android:src="@drawable/rep"
+            android:layout_margin="10dp" />
+        <TextView
+            android:layout_margin="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:text="Enter your ZIP code:"
+            android:id="@+id/txt"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#090909"/>
+        <EditText
+            android:layout_margin="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/zip"
+            android:layout_below="@+id/txt"
+            android:textColor="#122f68"
+            android:textSize="16sp"
+            android:maxLength="5"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="GO"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/zip"
+            android:id="@+id/go1"
+            android:background="#090909"
+            android:textColor="#f17979" />
+        <TextView
+            android:layout_margin="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go1"
+            android:text="OR"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/or"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#090909"/>
+        <TextView
+            android:layout_margin="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/or"
+            android:text="Enter your location:"
+            android:id="@+id/txt2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#090909"/>
+        <EditText
+            android:layout_margin="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            android:ems="10"
+            android:id="@+id/loc"
+            android:layout_below="@+id/txt2"
+            android:textColor="#122f68"
+            android:textSize="16sp"
+            android:maxLength="10"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="GO"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/loc"
+            android:id="@+id/go2"
+            android:textColor="#f17979"
+            android:background="#090909" />
+
+    </RelativeLayout>
+</ScrollView>

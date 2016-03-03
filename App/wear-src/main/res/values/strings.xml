@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Wear</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="title_activity_detailwear">detailwear</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="title_activity_firstview">firstview</string>
+    <string name="title_activity_secondview">secondview</string>
+    <string name="title_activity_zeroview">zeroview</string>
+    <string name="title_activity_picker">picker</string>
+    <string name="name1">John White</string>
+    <string name="name2">Bill West</string>
+    <string name="name3">Amber Law</string>
+    <string name="name0">Represent</string>
+    <string name="name11">Jessica Park</string>
+    <string name="name22">Ryan Jack</string>
+    <string name="name33">Tony Chris</string>
+    <string name="party1">Democrat</string>
+    <string name="party0">Elections2016</string>
+    <string name="party2">Republican</string>
+    <string name="party3">Republican</string>
+    <string name="party11">Democrat</string>
+    <string name="party22">Republican</string>
+    <string name="party33">Republican</string>
+    <string name="title2012">2012 Presidential Vote</string>
+    <string name="stat">State: Ohio\nCounty: Harris\nObama:35%\nRomney:64%</string>
+    <string name="title20122">2012 Presidential Vote</string>
+    <string name="stat2">State: Ohio\nCounty: Harris\nObama:35%\nRomney:64%</string>
+
+</resources>
