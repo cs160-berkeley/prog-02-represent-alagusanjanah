@@ -26,7 +26,8 @@ The information about the candidates can simulatneously be found on the watch. Y
 <img src="screenshots/JohnWhitewatch.png" height="400" alt="Screenshot"/><img src="screenshots/BillWestWatch.png" height="400" alt="Screenshot"/>                                 
                                                        
 
-You can scroll up to get the 2012 Presidential Vote statistics. 
+You can scroll up to get the 2012 Presidential Vote statistics.                                                                    
+
 <img src="screenshots/2012presidential.vote.png" height="400" alt="Screenshot"/>                                             
                                        
 
