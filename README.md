@@ -12,13 +12,13 @@ Alagu Sanjana Haribhaskaran (alagusanjana@berkeley.edu)
 See [your demo video title here] (https://link_to_your_video)
 
 ## Screenshots
-This is the main view of the app on the phone. 
+This is the main view of the app on the phone.                       
 <img src="screenshots/PhoneMainView.png" height="400" alt="Screenshot"/>                                              
 
-This is the Congressional View that you get after entering the ZipCode or location.
+This is the Congressional View that you get after entering the ZipCode or location.                   
 <img src="screenshots/CongView.png" height="400" alt="Screenshot"/>                                       
 
-These are the Detail Views of the candidates that you get by clicking on them. 
+These are the Detail Views of the candidates that you get by clicking on them.                  
 <img src="screenshots/JohnPhone.png" height="400" alt="Screenshot"/><img src="screenshots/BillPhone.png" height="400" alt="Screenshot"/>                                                
                          
 
