@@ -125,9 +125,9 @@ public class MainActivity extends Activity {
             //int x = ran.nextInt(10001) + 99999;
 
             //int x = 94703;
-            //Random randomno = new Random();
-            //int x = randomno.nextInt(postalc.size());
-            int x = 93240;
+            Random randomno = new Random();
+            int x = randomno.nextInt(postalc.size());
+            //int x = 93240;
             //String xst = postalc.get(x);
             String xst =Integer.toString(x);
             Log.d("T", "number is " + xst);
