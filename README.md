@@ -14,21 +14,21 @@ See CS260: PROG2c Assignment (https://youtu.be/QkpaLgoNyGI)
 ## Screenshots     
 ###PROG2C                      
 This is the home screen of the application. You can either enter your zipcode or use your current location.                
-<img src="screenshots/mainscreen1.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/mainscreen1.png" height="400" alt="Screenshot"/>               
 <img src="screenshots/mainscreen2.png" height="400" alt="Screenshot"/>                                           
 
 This takes you to the Congressional View, where you can see the list of senators and representatives.                      
-<img src="screenshots/cong1.png" height="400" alt="Screenshot"/>                                  
+<img src="screenshots/congress.png" height="400" alt="Screenshot"/>                                  
 
 You can click on them to get the detail view of that person.                           
-<img src="screenshots/detail1.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/detail1.png" height="400" alt="Screenshot"/>               
 <img src="screenshots/detail2.png" height="400" alt="Screenshot"/>                           
 
 The information about the representatives is also displayed on the watch simultaneously.                    
 <img src="screenshots/watch1.png" height="400" alt="Screenshot"/>                        
 
 You can click on the representative on the watch to get the detailed view on the phone.                   
-<img src="screenshots/watch2.png" height="300" alt="Screenshot"/> 
+<img src="screenshots/watch2.png" height="300" alt="Screenshot"/>              
 <img src="screenshots/detail1.png" height="400" alt="Screenshot"/>                
 
 
@@ -38,7 +38,7 @@ If you scroll up on the watch, you get the 2012 Presidential Vote statistics.
 The watch also has a shake feature, where it picks a random location when you shake the watch and displays the information on the watch and phone.    
 <img src="screenshots/congs.png" height="400" alt="Screenshot"/>                              
 
-<img src="screenshots/watchs.png" height="300" alt="Screenshot"/> 
+<img src="screenshots/watchs.png" height="300" alt="Screenshot"/>             
 <img src="screenshots/2012s.png" height="300" alt="Screenshot"/> 
 
 
