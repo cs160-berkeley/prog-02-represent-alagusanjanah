@@ -28,18 +28,18 @@ The information about the representatives is also displayed on the watch simulta
 <img src="screenshots/watch1.png" height="400" alt="Screenshot"/>                        
 
 You can click on the representative on the watch to get the detailed view on the phone.                   
-<img src="screenshots/watch2.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/watch2.png" height="300" alt="Screenshot"/> 
 <img src="screenshots/detail1.png" height="400" alt="Screenshot"/>                
 
 
 If you scroll up on the watch, you get the 2012 Presidential Vote statistics.                        
-<img src="screenshots/2012.png" height="400" alt="Screenshot"/>           
+<img src="screenshots/2012.png" height="300" alt="Screenshot"/>           
 
 The watch also has a shake feature, where it picks a random location when you shake the watch and displays the information on the watch and phone.    
 <img src="screenshots/congs.png" height="400" alt="Screenshot"/>                              
 
-<img src="screenshots/watchs.png" height="400" alt="Screenshot"/> 
-<img src="screenshots/2012s.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/watchs.png" height="300" alt="Screenshot"/> 
+<img src="screenshots/2012s.png" height="300" alt="Screenshot"/> 
 
 
 ###PROG2B                                  
