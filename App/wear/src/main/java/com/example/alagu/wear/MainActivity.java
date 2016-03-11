@@ -128,8 +128,8 @@ public class MainActivity extends Activity {
             Random randomno = new Random();
             int x = randomno.nextInt(postalc.size());
             //int x = 93240;
-            //String xst = postalc.get(x);
-            String xst =Integer.toString(x);
+            String xst = postalc.get(x);
+            //String xst =Integer.toString(x);
             Log.d("T", "number is " + xst);
 
         //final GridViewPager pager = (GridViewPager) findViewById(R.id.pager);
