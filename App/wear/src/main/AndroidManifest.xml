@@ -4,6 +4,7 @@
 
     <uses-feature android:name="android.hardware.type.watch" />
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,6 +28,10 @@
             </intent-filter>
         </service>
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8d2846a4a157c69f59d3e42d15a6fd2b85caef92" />
     </application>
+
 
 </manifest>

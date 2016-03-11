@@ -16,6 +16,8 @@ public class MyCardFragment extends Fragment {
     private View.OnClickListener listener;
     private String t;
     private String te;
+    private String pl;
+    private String sc;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
@@ -23,8 +25,12 @@ public class MyCardFragment extends Fragment {
         View fragmentView = inflater.inflate(R.layout.fragment_my, container, false);
         TextView mTitle = (TextView) fragmentView.findViewById(R.id.title);
         TextView mDescription = (TextView) fragmentView.findViewById(R.id.description);
+        TextView state = (TextView) fragmentView.findViewById(R.id.place);
+        TextView scroll = (TextView) fragmentView.findViewById(R.id.scroll);
         mTitle.setText(t);
         mDescription.setText(te);
+        state.setText(pl);
+        scroll.setText(sc);
         fragmentView.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -43,6 +49,13 @@ public class MyCardFragment extends Fragment {
     public String getTitle() {
         return t;
     }
+    public void setplace (String place) {
+        pl=place;
+    }
+    public void setscroll (String scr) {
+        sc=scr;
+    }
+
     public void setText (String text) {
         te=text;
     }

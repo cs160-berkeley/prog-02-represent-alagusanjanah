@@ -4,4 +4,7 @@
     <string name="title_activity_view">View</string>
     <string name="title_activity_detail">More Information</string>
     <string name="title_activity_cong_view">CongView</string>
+    <string name="title_activity_gps">GPSActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_getvalues">getvalues</string>
 </resources>

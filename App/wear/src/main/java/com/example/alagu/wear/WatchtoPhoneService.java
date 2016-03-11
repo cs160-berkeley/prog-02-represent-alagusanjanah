@@ -83,7 +83,11 @@ public class WatchtoPhoneService extends Service {
         // Which cat do we want to feed? Grab this info from INTENT
         // which was passed over when we called startService
         Bundle extras = intent.getExtras();
+        if (extras.getString("mode") != null) {
+
         final String mode = extras.getString("mode");
+        final String pl = extras.getString("zip");
+
         Log.d("T", "xyz " + mode);
 
         // Send the message with the cat name
@@ -93,9 +97,31 @@ public class WatchtoPhoneService extends Service {
                 //first, connect to the apiclient
                 mWatchApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                sendMessage("/" + mode, mode);
+                sendMessage("/" + mode, pl);
+                Log.d("T", "place is in WtoP " + pl);
             }
         }).start();
+        }  else if (extras.getString("shakemode") != null) {
+            final String pl = extras.getString("shakemode");
+            final String mode = "shakemode";
+
+            Log.d("T", "xyz " + mode);
+
+            // Send the message with the cat name
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    //first, connect to the apiclient
+                    mWatchApiClient.connect();
+                    //now that you're connected, send a massage with the cat name
+                    sendMessage("/" + mode, pl);
+                    Log.d("T", "place is in WtoP in shake " + mode);
+                }
+            }).start();
+
+    }
+
+
 
         return START_STICKY;
     }

@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.wearable.view.CardFragment;
 import android.support.wearable.view.FragmentGridPagerAdapter;
@@ -21,20 +22,60 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SampleGridPagerAdapter extends FragmentGridPagerAdapter {
+    private ArrayList<JSONArray> candidates;
+    private int n;
+
+    private JSONObject person1;
+    private JSONObject person2;
+    private JSONObject person3;
+    private JSONObject person4;
+    private String firstname1;
+    private String lasttname1;
+    private String partyname1;
+    private String dist;
+    private String twitterid1;
+    private String firstname2;
+    private String lasttname2;
+    private String partyname2;
+    private String twitterid2;
+    private String firstname3;
+    private String lasttname3;
+    private String partyname3;
+    private String twitterid3;
+    private String firstname4;
+    private String lasttname4;
+    private String partyname4;
+    private String twitterid4;
+    private String[] words;
+
+
+
+
     public MyCardFragment fragment;
     Context mContext;
     private List mRows;
     int m = -1;
+    private String place;
 
     public SampleGridPagerAdapter(Context ctx, FragmentManager fm, String mode) {
         super(fm);
         mContext = ctx;
         if (mode != null) {
-            if (mode.equals("zipcode")) m = 0;
-            else if (mode.equals("currentLocation")) m = 1;
+            place = mode;
+            words = place.split(" ");
+            Log.d("T", "mode is in samp: " + words[0]);
+
         }
     }
 
@@ -44,38 +85,40 @@ public class SampleGridPagerAdapter extends FragmentGridPagerAdapter {
 
     // A simple container for static data in each page
     private static class Page {
-        int titleRes;
-        int textRes;
+        String titleRes;
+        String textRes;
         int iconRes;
 
-        public Page(int titleRes, int textRes, int iconRes) {
+        public Page(String titleRes, String textRes, int iconRes) {
             this.titleRes = titleRes;
             this.textRes = textRes;
             this.iconRes = iconRes;
         }
     }
+
     // Create a static set of pages in a 2D array
     private final Page[][] PAGES1 = {
             {
-                    new Page(R.string.name1, R.string.party1, 0),
-                    new Page(R.string.name2, R.string.party2, 0),
-                    new Page(R.string.name3, R.string.party3, 0),
+                    new Page("","", 0),
+                    new Page("","", 0),
+                    new Page("","", 0),
             },
             {
-                    new Page(R.string.title2012, R.string.stat, 0)
+                    new Page("","", 0)
             }
     };
     private final Page[][] PAGES2 = {
             {
-                    new Page(R.string.name11, R.string.party11, 0),
-                    new Page(R.string.name22, R.string.party22, 0),
-                    new Page(R.string.name33, R.string.party33, 0),
+                    new Page("","", 0),
+                    new Page("","", 0),
+                    new Page("","", 0),
+                    new Page("","", 0),
             },
             {
-                    new Page(R.string.title20122, R.string.stat2, 0)
+                    new Page("","", 0)
             }
     };
-    private final Page[][] PAGES_EMPTY = {
+    /*private final Page[][] PAGES_EMPTY = {
             {
                     new Page(R.string.name0, R.string.party0, 0),
                     new Page(R.string.name0, R.string.party0, 0),
@@ -84,29 +127,173 @@ public class SampleGridPagerAdapter extends FragmentGridPagerAdapter {
             {
                     new Page(R.string.name0, R.string.party0, 0)
             }
-    };
+    };*/
 
     // Override methods in FragmentGridPagerAdapter
     // Obtain the UI fragment at the specified position
     @Override
     public Fragment getFragment(int row, int col) {
-        //TODO: fix for demo purpose
+
         Page page;
-        if (m == 0) {
-            page = PAGES1[row][col];
-        } else if (m == 1) {
-            page = PAGES2[row][col];
-        } else {
-            page = PAGES_EMPTY[row][col];
+
+
+        if (Integer.valueOf(words[0]).intValue() == 3) {
+            if (words[3]!=null) {
+                page = PAGES1[row][col];
+                if (row == 0 && col == 0) {
+                    page.titleRes = words[7] + " " + words[8];
+                    page.textRes = words[9];
+                } else if (row == 0 && col == 1) {
+                    page.titleRes = words[10] + " " + words[11];
+                    page.textRes = words[12];
+                } else if (row == 0 && col == 2) {
+                    page.titleRes = words[13] + " " + words[14];
+                    page.textRes = words[15];
+                } else if (row == 1 && col == 0) {
+                    page.titleRes = words[3] + ", "+words[2];
+                    page.textRes = " ";
+                }
+            } else {
+                page = PAGES1[row][col];
+                if (row == 0 && col == 0) {
+                    page.titleRes = words[6] + " " + words[7];
+                    page.textRes = words[8];
+                } else if (row == 0 && col == 1) {
+                    page.titleRes = words[9] + " " + words[10];
+                    page.textRes = words[11];
+                } else if (row == 0 && col == 2) {
+                    page.titleRes = words[12] + " " + words[13];
+                    page.textRes = words[14];
+                } else if (row == 1 && col == 0 ) {
+                    page.titleRes =" ";
+                    page.textRes = " ";
+                }
+            }
+            final MyCardFragment fragment = new MyCardFragment();
+            fragment.setTitle(page.titleRes);
+            fragment.setText(page.textRes);
+            if (row!=1) {
+                if (words[3]==null) {
+                    fragment.setplace(" ");
+                } else{
+                    fragment.setplace(words[3] + ", " + words[2]);
+                }
+                fragment.setscroll("Scroll Up for 2012 Vote Stats");
+            } else {
+                if (words[3]==null) {
+                    fragment.setplace(" ");
+                    fragment.setscroll(" ");
+                } else {
+
+                    fragment.setText("Obama: " + words[5] + "% ");
+                    fragment.setplace("Romney: " + words[6] + "% ");
+
+                }
+            }
+
+            fragment.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(final View view) {
+                    Intent sendIntent = new Intent(mContext, WatchtoPhoneService.class);
+                    String tit = fragment.getTitle();
+                    sendIntent.putExtra("mode", tit);
+                    sendIntent.putExtra("zip", words[1]);
+                    mContext.startService(sendIntent);
+                }
+
+            });
+
+            return fragment;
+
+        } else if (Integer.valueOf(words[0]).intValue() == 4) {
+            if (words[3]!=null) {
+                page = PAGES1[row][col];
+                if (row == 0 && col == 0) {
+                    page.titleRes = words[7] + " " + words[8];
+                    page.textRes = words[9];
+                } else if (row == 0 && col == 1) {
+                    page.titleRes = words[10] + " " + words[11];
+                    page.textRes = words[12];
+                } else if (row == 0 && col == 2) {
+                    page.titleRes = words[13] + " " + words[14];
+                    page.textRes = words[15];
+                }else if (row == 0 && col == 3) {
+                    page.titleRes = words[16] + " " + words[17];
+                    page.textRes = words[18];
+                } else if (row == 1 && col == 0) {
+                    page.titleRes = " ";
+                    page.textRes = " ";
+                }
+            } else {
+                page = PAGES1[row][col];
+                if (row == 0 && col == 0) {
+                    page.titleRes = words[6] + " " + words[7];
+                    page.textRes = words[8];
+                } else if (row == 0 && col == 1) {
+                    page.titleRes = words[9] + " " + words[10];
+                    page.textRes = words[11];
+                } else if (row == 0 && col == 2) {
+                    page.titleRes = words[12] + " " + words[13];
+                    page.textRes = words[14];
+                } else if (row == 0 && col == 3) {
+                    page.titleRes = words[15] + " " + words[16];
+                    page.textRes = words[17];
+                } else if (row == 1 && col == 0 ) {
+                    page.titleRes = words[3]+", "+words[2];
+                    page.textRes = " ";
+                }
+            }
+
+            final MyCardFragment fragment = new MyCardFragment();
+            fragment.setTitle(page.titleRes);
+            fragment.setText(page.textRes);
+            if (row!=1) {
+                if (words[3]==null) {
+                    fragment.setplace(" ");
+                } else{
+                    fragment.setplace(words[3] + ", " + words[2]);
+                }
+                fragment.setscroll("Scroll Up for 2012 Vote Stats");
+            } else {
+                if (words[3]==null) {
+                    fragment.setplace(" ");
+                    fragment.setscroll(" ");
+
+                } else {
+                    fragment.setText("Obama: " + words[5] + "% ");
+                    fragment.setplace("Romney: " + words[6] + "% ");
+
+                }
+            }
+
+            fragment.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(final View view) {
+                    Intent sendIntent = new Intent(mContext, WatchtoPhoneService.class);
+                    String tit = fragment.getTitle();
+                    sendIntent.putExtra("mode", tit);
+                    sendIntent.putExtra("zip", words[1]);
+                    mContext.startService(sendIntent);
+                }
+
+            });
+
+            return fragment;
+
+
         }
-        String title =
+        return null;
+    }/*else {
+            page = PAGES_EMPTY[row][col];
+        }*/
+        /*String title =
                 page.titleRes != 0 ? mContext.getString(page.titleRes) : null;
         String text =
-                page.textRes != 0 ? mContext.getString(page.textRes) : null;
+                page.textRes != 0 ? mContext.getString(page.textRes) : null;*/
         //CardFragment fragment = MyCardFragment.create(title, text, page.iconRes);
-        final MyCardFragment fragment = new MyCardFragment();
-        fragment.setTitle(title);
-        fragment.setText(text);
+
 
         // Advanced settings (card gravity, card expansion/scrolling)
         //fragment.setCardGravity(Gravity.BOTTOM);
@@ -114,20 +301,6 @@ public class SampleGridPagerAdapter extends FragmentGridPagerAdapter {
         //fragment.setExpansionDirection(CardFragment.EXPAND_DOWN);
         //fragment.setExpansionFactor(2.0f);
         //fragment.setCardMarginTop(150dp);
-        fragment.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(final View view) {
-                Intent sendIntent = new Intent(mContext, WatchtoPhoneService.class);
-                String tit = fragment.getTitle();
-                sendIntent.putExtra("mode", tit);
-                mContext.startService(sendIntent);
-            }
-
-        });
-
-        return fragment;
-    }
 
 
     // Obtain the background image for the specific page

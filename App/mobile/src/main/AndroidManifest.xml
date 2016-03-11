@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.alagu.wear">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyC7l_OeohAxB9XShaDjBpJa2pkKq0O3Geg" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -32,7 +40,35 @@
             android:label="@string/title_activity_cong_view" />
         <activity
             android:name=".Detail"
-            android:label="@string/title_activity_detail"></activity>
+            android:label="@string/title_activity_detail" />
+        <activity
+            android:name=".GPSActivity"
+            android:label="@string/title_activity_gps"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8d2846a4a157c69f59d3e42d15a6fd2b85caef92" />
+
+        <activity
+            android:name=".getvalues"
+            android:label="@string/title_activity_getvalues"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package com.example.alagu.wear;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -12,12 +13,20 @@ import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 
-/**
- * Created by joleary on 2/19/16.
- */
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.ArrayList;
+
 public class PhonetoWatchService extends Service {
 
     private GoogleApiClient mApiClient;
+    private String place;
+
 
     @Override
     public void onCreate() {
@@ -35,6 +44,8 @@ public class PhonetoWatchService extends Service {
                     }
                 })
                 .build();
+
+        //Intent intent = getIntent();
     }
 
     @Override
@@ -45,11 +56,15 @@ public class PhonetoWatchService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        // Which cat do we want to feed? Grab this info from INTENT
-        // which was passed over when we called startService
-        Bundle extras = intent.getExtras();
-        final String mode = extras.getString("mode");
-        Log.d("T", "xyz " + mode);
+
+
+        //Intent viewintent = getIntent();
+        //Bundle extras = intent.getExtras();
+        //final String mode = extras.getString("mode");
+        place = "xyz";
+        if (intent.getStringExtra("details")!=null){
+        place = intent.getStringExtra("details");}
+        Log.d("T", "mode in PW" + place);
 
         // Send the message with the cat name
         new Thread(new Runnable() {
@@ -58,7 +73,7 @@ public class PhonetoWatchService extends Service {
                 //first, connect to the apiclient
                 mApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                sendMessage("/" + mode, mode);
+                sendMessage("/"+place, place);
             }
         }).start();
 
@@ -87,6 +102,7 @@ public class PhonetoWatchService extends Service {
                 }
             }
         }).start();
+        Log.d("T", "sent");
     }
 
 }

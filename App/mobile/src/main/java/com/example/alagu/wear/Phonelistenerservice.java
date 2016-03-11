@@ -19,15 +19,37 @@ import java.nio.charset.StandardCharsets;
 public class Phonelistenerservice extends WearableListenerService {
 
     //   WearableListenerServices don't need an iBinder or an onStartCommand: they just need an onMessageReceieved.
-    private static final String john = "/John White";
-    private static final String bill = "/Bill West";
-    private static final String amber = "/Amber Law";
-    private static final String loc = "/currentLocation";
+
+
 
     @Override
     public void onMessageReceived(MessageEvent messageEvent) {
+
         Log.d("T", "in PhoneListenerService, got: " + messageEvent.getPath());
-        if( messageEvent.getPath().equalsIgnoreCase(john) ) {
+        if( messageEvent.getPath().equalsIgnoreCase("/shakemode")) {
+            String pathname = messageEvent.getPath();
+            String value = new String(messageEvent.getData(), StandardCharsets.UTF_8);
+
+            Intent viewintent = new Intent(getBaseContext(), getvalues.class);
+            viewintent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            viewintent.putExtra("place", value);
+            Log.d("T", "about to start shake" + value);
+            startActivity(viewintent);
+        } else {
+            String pathname = messageEvent.getPath();
+            String value = new String(messageEvent.getData(), StandardCharsets.UTF_8);
+            Intent intent = new Intent(this, Detail.class);
+
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.putExtra("name", pathname);
+            intent.putExtra("zip", value);
+            Log.d("T", "about to start watch MainActivity with john" + pathname);
+            startActivity(intent);
+
+        }
+
+
+        /*if( messageEvent.getPath().equalsIgnoreCase(john) ) {
 
             // Value contains the String we sent over in WatchToPhoneService, "good job"
             String value = new String(messageEvent.getData(), StandardCharsets.UTF_8);
@@ -77,7 +99,7 @@ public class Phonelistenerservice extends WearableListenerService {
             startActivity(intent);
         }else {
             super.onMessageReceived( messageEvent );
-        }
+        }*/
 
     }
 }
