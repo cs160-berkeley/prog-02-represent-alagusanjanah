@@ -14,7 +14,10 @@ See CS260: PROG2c Assignment (https://youtu.be/QkpaLgoNyGI)
 ## Screenshots     
 ###PROG2C                      
 This is the home screen of the application. You can either enter your zipcode or use your current location.                
-<img src="screenshots/mainscreen1.png" height="400" alt="Screenshot"/>  <img src="screenshots/mainscreen2.png" height="400" alt="Screenshot"/>                                           
+<img src="screenshots/mainscreen1.png" height="400" alt="Screenshot"/>  <img src="screenshots/mainscreen2.png" height="400" alt="Screenshot"/>                   
+
+This takes you to the Congressional View, where you can see the list of senators and representatives.            
+<img src="screenshots/congress.png" height="400" alt="Screenshot"/>
 
 You can click on them to get the detail view of that person.                           
 <img src="screenshots/detail1.png" height="400" alt="Screenshot"/>  <img src="screenshots/detail2.png" height="400" alt="Screenshot"/>                           
